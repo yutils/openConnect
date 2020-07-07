@@ -14,3 +14,10 @@
 如果失败，那就USB连接电脑adb<br/>
 运行："adb tcpip 5555"<br/>
 
+
+## 效果图
+
+![效果图1](https://raw.githubusercontent.com/yutils/openConnect/master/image/image1.jpg)
+
+![效果图2](https://raw.githubusercontent.com/yutils/openConnect/master/image/image2.jpg)
+
