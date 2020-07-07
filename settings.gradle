@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "打开网络调试"
