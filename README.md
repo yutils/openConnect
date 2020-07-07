@@ -14,6 +14,59 @@
 如果失败，那就USB连接电脑adb<br/>
 运行："adb tcpip 5555"<br/>
 
+### 特点
+
+1.把MainActivity做成了1像素，而且透明。打开网络调试后就关掉，这样用户就无感<br/>
+2.桌面APP图标长按弹出对话框，进行端口设置
+
+## 核心代码
+```
+  /**
+     * 打开网络调试
+     * @return 是否成功
+     */
+    fun openNetworkDebugging(): Boolean {
+        var os: DataOutputStream? = null
+        return try {
+            val process = Runtime.getRuntime().exec("su")
+            os = DataOutputStream(process.outputStream)
+            os.writeBytes("setprop service.adb.tcp.port $PORT\n")
+            os.writeBytes("start adbd\n")
+            os.flush()
+            true
+        } catch (e: Exception) {
+            false
+        } finally {
+            try {
+                os?.close()
+            } catch (e: IOException) {
+            }
+        }
+    }
+
+    /**
+     * 关闭网络调试
+     * @return 是否成功
+     */
+    fun closeNetworkDebugging(): Boolean {
+        var os: DataOutputStream? = null
+        return try {
+            val process = Runtime.getRuntime().exec("su")
+            os = DataOutputStream(process.outputStream)
+            os.writeBytes("setprop service.adb.tcp.port 5555\n")
+            os.writeBytes("stop adbd\n")
+            os.flush()
+            true
+        } catch (e: Exception) {
+            false
+        } finally {
+            try {
+                os?.close()
+            } catch (e: IOException) {
+            }
+        }
+    }
+```
 
 ## 效果图
 
