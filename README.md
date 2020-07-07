@@ -21,3 +21,7 @@
 
 ![效果图2](https://raw.githubusercontent.com/yutils/openConnect/master/image/image2.jpg)
 
+
+[我的github地址](https://github.com/yutils/openConnect)
+
+[我的csdn地址](https://blog.csdn.net/Yu1441)
