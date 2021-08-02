@@ -1,105 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <TextView
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:text="本机IP"
-        android:textColor="#3141B7"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/tv_ip_port"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:textColor="#3141B7"
-        android:textSize="16sp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/bt_open"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:text="打开网络调试" />
-
-        <Button
-            android:id="@+id/bt_close"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:text="关闭网络调试" />
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="10dp"
             android:layout_marginTop="5dp"
-            android:text="设置端口:"
+            android:gravity="center"
+            android:text="本机IP"
             android:textColor="#3141B7"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_ip_port"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:textColor="#3141B7"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bt_open"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="打开网络调试" />
+
+            <Button
+                android:id="@+id/bt_close"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:text="关闭网络调试" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:text="设置端口:"
+                android:textColor="#3141B7"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/et_port"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:hint="设置端口"
+                android:inputType="number"
+                android:text="5555" />
+
+            <Button
+                android:id="@+id/bt_port"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:text="设置" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/explain"
+            android:textColor="#1485f8"
             android:textSize="18sp" />
 
-        <EditText
-            android:id="@+id/et_port"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="1dp"
-            android:layout_weight="1"
-            android:hint="设置端口"
-            android:inputType="number"
-            android:text="5555" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
         <Button
-            android:id="@+id/bt_port"
-            android:layout_width="wrap_content"
+            android:id="@+id/bt_reward"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="1dp"
-            android:text="设置" />
+            android:text="打赏作者" />
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/tv_tips"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="@string/explain"
-        android:textColor="#1485f8"
-        android:textSize="18sp" />
-
-    <Space
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-    <Button
-        android:id="@+id/bt_reward"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="1dp"
-        android:text="打赏作者" />
-</LinearLayout>
+</layout>

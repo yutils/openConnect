@@ -1,17 +1,4 @@
 <resources>
     <string name="app_name">网络调试</string>
-    <string name="explain">说明\n
-        为了开发调试方便\n
-        我们经常需要网络调试\n
-        蛋疼的是\n
-        每次关机又要重新打开网络调试\n
-        很麻烦，而且容易被累死\n
-        所以我开发了这\n
-        另外，此APP需要root权限\n
-        如果失败，那就USB连接电脑adb\n
-        运行："adb tcpip 5555"\n
-        源码奉上\n
-        点击此文本进入github下载源码\n
-    </string>
-
+    <string name="explain">github地址：https://github.com/yutils/openConnect</string>
 </resources>

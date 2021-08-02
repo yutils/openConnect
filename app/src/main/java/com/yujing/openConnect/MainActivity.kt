@@ -11,6 +11,7 @@ import android.view.Gravity
 import android.view.Window
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.yujing.openConnect.utlis.Utils
 
@@ -22,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-            initDynamicShortcuts();
+            initDynamicShortcuts()
         }
         //设置1像素
         val window: Window = window
@@ -48,7 +49,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         open()
-        finish()
+        startActivity(Intent(this,SettingActivity::class.java))
         return
     }
 
@@ -83,6 +84,7 @@ class MainActivity : AppCompatActivity() {
     /**
      * 为App创建动态Shortcuts
      */
+    @RequiresApi(Build.VERSION_CODES.N_MR1)
     private fun initDynamicShortcuts() {
         //①、创建动态快捷方式的第一步，创建ShortcutManager
         val scManager = getSystemService(ShortcutManager::class.java)
