@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 焦点 -->
+    <item android:state_focused="true">
+        <shape>
+            <!--solid和gradient不同时存在-->
+            <!-- <solid android:color="@color/trans_Black_2" />-->
+            <gradient android:angle="90"  android:startColor="@color/focused_startColor" android:centerColor="@color/focused_centerColor"  android:endColor="@color/focused_endColor" android:type="linear" />
+            <stroke android:width="0.5dp" android:color="@color/focused_strokeColor" />
+            <corners android:bottomLeftRadius="@dimen/dp20"  android:bottomRightRadius="@dimen/dp2" android:topLeftRadius="@dimen/dp2" android:topRightRadius="@dimen/dp2" />
+        </shape>
+    </item>
+    <!-- 按下颜色 -->
+    <item android:state_pressed="true">
+        <shape>
+            <!--solid和gradient不同时存在-->
+            <!-- <solid android:color="@color/trans_Black_2" />-->
+
+            <gradient android:angle="90" android:centerColor="@color/pressed_centerColor" android:endColor="@color/trans" android:startColor="@color/trans" android:type="linear" />
+
+            <stroke android:width="0.5dp" android:color="@color/pressed_strokeColor" />
+
+            <corners android:bottomLeftRadius="@dimen/dp2" android:bottomRightRadius="@dimen/dp20" android:topLeftRadius="@dimen/dp2" android:topRightRadius="@dimen/dp2" />
+        </shape>
+    </item>
+    <!-- 抬起颜色 -->
+    <item android:state_pressed="false">
+        <shape>
+            <!--   <solid android:color="@color/title" />-->
+            <!--            android:centerColor="@color/blue_light_E"-->
+            <gradient android:angle="90" android:endColor="@color/confirm_endColor" android:startColor="@color/confirm_startColor" android:type="linear" />
+
+            <stroke android:width="0.5dp" android:color="@color/confirm_strokeColor" />
+
+            <corners android:bottomLeftRadius="@dimen/dp2" android:bottomRightRadius="@dimen/dp20" android:topLeftRadius="@dimen/dp2" android:topRightRadius="@dimen/dp2" />
+        </shape>
+    </item>
+
+</selector>

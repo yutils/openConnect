@@ -3,4 +3,176 @@
     <color name="colorPrimary">#169DFA</color>
     <color name="colorPrimaryDark">#3B97FF</color>
     <color name="colorAccent">#0A86D9</color>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--····························公共····························-->
+    <!-- 透明 -->
+    <color name="trans">#0000</color>
+    <!--特殊文字颜色-->
+    <color name="text_color2">#00FF00</color>
+    <!--分割线颜色-->
+    <color name="divider_color1">#A0FFFFFF</color>
+    <!--提示文字颜色-->
+    <color name="hintTextColor">#6fff</color>
+    <!--编辑框背景-->
+    <color name="edit_background">#2fff</color>
+    <!--输入的值背景-->
+    <color name="value_background">#4fff</color>
+
+    <!--等级存在-->
+    <color name="correct">#00FF00</color>
+    <!--等级不存在-->
+    <color name="error">#FF0000</color>
+    <!-- 小键盘文字提示 -->
+    <color name="keyboard_tips">#cccccc</color>
+
+    <!--焦点-->
+    <color name="focused_startColor">#00CCCC</color>
+    <!--焦点-->
+    <color name="focused_centerColor">#00CC99</color>
+    <!--焦点-->
+    <color name="focused_endColor">#00CC00</color>
+    <!--焦点-->
+    <color name="focused_strokeColor">#1000</color>
+
+    <!--按下-->
+    <color name="pressed_centerColor">#2000</color>
+    <!--按下-->
+    <color name="pressed_strokeColor">#1000</color>
+
+    <!--取消按钮-->
+    <color name="cancel_endColor">#C03050</color>
+    <!--取消按钮-->
+    <color name="cancel_startColor">#FF468F</color>
+    <!--取消按钮-->
+    <color name="cancel_strokeColor">#FF0000</color>
+
+    <!--确定、取消按钮文字颜色-->
+    <color name="button_textColor">#FFFFFF</color>
+    <!--····························绿色····························-->
+
+    <!--        &lt;!&ndash;标题背景&ndash;&gt;-->
+    <!--        <color name="title_background">#4fff</color>-->
+    <!--        &lt;!&ndash;标题文字&ndash;&gt;-->
+    <!--        <color name="title_text">#FFFFFF</color>-->
+    <!--        &lt;!&ndash;主体文字颜色&ndash;&gt;-->
+    <!--        <color name="text_color1">#FFFFFF</color>-->
+    <!--        &lt;!&ndash; IP设置背景颜色 &ndash;&gt;-->
+    <!--        <color name="ip_set_background">#C0006840</color>-->
+    <!--        &lt;!&ndash; 小键盘背景颜色 &ndash;&gt;-->
+    <!--        <color name="fill_background">#A0007843</color>-->
+    <!--        &lt;!&ndash; 小键盘边框 &ndash;&gt;-->
+    <!--        <color name="keyboard_stroke">#FFFFFF</color>-->
+    <!--        &lt;!&ndash; 小键盘边框按下 &ndash;&gt;-->
+    <!--        <color name="keyboard_stroke_pressed">#00EE00</color>-->
+    <!--        &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+    <!--        <color name="keyboard_start">#B01ADE81</color>-->
+    <!--        &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+    <!--        <color name="keyboard_center">#F01ADE81</color>-->
+    <!--        &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+    <!--        <color name="keyboard_end">#A01ADE81</color>-->
+    <!--        &lt;!&ndash;确定按钮&ndash;&gt;-->
+    <!--        <color name="confirm_endColor">#01C97B</color>-->
+    <!--        &lt;!&ndash;确定按钮&ndash;&gt;-->
+    <!--        <color name="confirm_startColor">#01EDAC</color>-->
+    <!--        &lt;!&ndash;确定按钮&ndash;&gt;-->
+    <!--        <color name="confirm_strokeColor">#01ED6C</color>-->
+
+    <!--····························蓝色····························-->
+
+<!--    &lt;!&ndash;标题背景&ndash;&gt;-->
+<!--    <color name="title_background">#4fff</color>-->
+<!--    &lt;!&ndash;标题文字&ndash;&gt;-->
+<!--    <color name="title_text">#FFFFFF</color>-->
+<!--    &lt;!&ndash;主体文字颜色&ndash;&gt;-->
+<!--    <color name="text_color1">#FFFFFF</color>-->
+<!--    &lt;!&ndash; IP设置背景颜色 &ndash;&gt;-->
+<!--    <color name="ip_set_background">#B0003060</color>-->
+<!--    &lt;!&ndash; 小键盘背景颜色 &ndash;&gt;-->
+<!--    <color name="fill_background">#A0004378</color>-->
+<!--    &lt;!&ndash; 小键盘边框 &ndash;&gt;-->
+<!--    <color name="keyboard_stroke">#FFFFFF</color>-->
+<!--    &lt;!&ndash; 小键盘边框按下 &ndash;&gt;-->
+<!--    <color name="keyboard_stroke_pressed">#00EE00</color>-->
+<!--    &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+<!--    <color name="keyboard_start">#B01A81DE</color>-->
+<!--    &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+<!--    <color name="keyboard_center">#F01A81DE</color>-->
+<!--    &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+<!--    <color name="keyboard_end">#A01A81DE</color>-->
+<!--    &lt;!&ndash;确定按钮&ndash;&gt;-->
+<!--    <color name="confirm_endColor">#017BC9</color>-->
+<!--    &lt;!&ndash;确定按钮&ndash;&gt;-->
+<!--    <color name="confirm_startColor">#01ACED</color>-->
+<!--    &lt;!&ndash;确定按钮&ndash;&gt;-->
+<!--    <color name="confirm_strokeColor">#016CED</color>-->
+
+    <!--····························黄色····························-->
+    <!--        &lt;!&ndash;标题背景&ndash;&gt;-->
+    <!--        <color name="title_background">#B0006030</color>-->
+    <!--        &lt;!&ndash;标题文字&ndash;&gt;-->
+    <!--        <color name="title_text">#FFFFFF</color>-->
+    <!--        &lt;!&ndash;主体文字颜色&ndash;&gt;-->
+    <!--        <color name="text_color1">#FFFFFF</color>-->
+    <!--        &lt;!&ndash; IP设置背景颜色 &ndash;&gt;-->
+    <!--        <color name="ip_set_background">#B0006030</color>-->
+    <!--        &lt;!&ndash; 小键盘背景颜色 &ndash;&gt;-->
+    <!--        <color name="fill_background">#A0007843</color>-->
+    <!--        &lt;!&ndash; 小键盘边框 &ndash;&gt;-->
+    <!--        <color name="keyboard_stroke">#FFFFFF</color>-->
+    <!--        &lt;!&ndash; 小键盘边框按下 &ndash;&gt;-->
+    <!--        <color name="keyboard_stroke_pressed">#00EE00</color>-->
+    <!--        &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+    <!--        <color name="keyboard_start">#900C5D01</color>-->
+    <!--        &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+    <!--        <color name="keyboard_center">#90077901</color>-->
+    <!--        &lt;!&ndash; 小键盘按钮 &ndash;&gt;-->
+    <!--        <color name="keyboard_end">#A00A5D01</color>-->
+    <!--        &lt;!&ndash;确定按钮&ndash;&gt;-->
+    <!--        <color name="confirm_endColor">#C97B01</color>-->
+    <!--        &lt;!&ndash;确定按钮&ndash;&gt;-->
+    <!--        <color name="confirm_startColor">#EDAC01</color>-->
+    <!--        &lt;!&ndash;确定按钮&ndash;&gt;-->
+    <!--        <color name="confirm_strokeColor">#EDAC01</color>-->
+
+    <!--····························白色····························-->
+        <!--标题背景-->
+        <color name="title_background">#00b2EE</color>
+        <!--标题文字-->
+        <color name="title_text">#FFFFFF</color>
+        <!--主体文字颜色-->
+        <color name="text_color1">#282828</color>
+        <!-- IP设置背景颜色 -->
+        <color name="ip_set_background">#B0003060</color>
+        <!-- 小键盘背景颜色 -->
+        <color name="fill_background">#C0FFFFFF</color>
+        <!-- 小键盘边框 -->
+        <color name="keyboard_stroke">#B01A81DE</color>
+        <!-- 小键盘边框按下 -->
+        <color name="keyboard_stroke_pressed">#00EE00</color>
+        <!-- 小键盘按钮 -->
+        <color name="keyboard_start">#A0FFFFFF</color>
+        <!-- 小键盘按钮 -->
+        <color name="keyboard_center">#A0FFFFFF</color>
+        <!-- 小键盘按钮 -->
+        <color name="keyboard_end">#A0FFFFFF</color>
+        <!--确定按钮-->
+        <color name="confirm_endColor">#017BC9</color>
+        <!--确定按钮-->
+        <color name="confirm_startColor">#01ACED</color>
+        <!--确定按钮-->
+        <color name="confirm_strokeColor">#016CED</color>
 </resources>

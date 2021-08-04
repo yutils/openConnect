@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--虚线,注意：控件高度必须大于 android:width，且添加android:layerType="software"-->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="line">
+    <stroke
+        android:width="@dimen/dp1"
+        android:color="#802EB0FA"
+        android:dashWidth="@dimen/dp10"
+        android:dashGap="@dimen/dp5" >
+    </stroke>
+</shape>

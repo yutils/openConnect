@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">网络调试</string>
-    <string name="explain">github地址：https://github.com/yutils/openConnect</string>
+    <string name="explain">开源github地址：https://github.com/yutils/openConnect</string>
 </resources>

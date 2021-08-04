@@ -10,10 +10,10 @@ import android.os.Bundle
 import android.view.Gravity
 import android.view.Window
 import android.view.WindowManager
-import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.yujing.openConnect.utlis.Utils
+import com.yujing.utils.YCheck
 
 /**
  * 1像素Activity，且背景透明
@@ -34,51 +34,36 @@ class MainActivity : AppCompatActivity() {
         params.height = 1
         params.width = 1
         window.attributes = params
+        //初始化
+        if (Utils.usePortCustom == null) {
+            Utils.usePortCustom = UsePort()
+            Utils.usePortCustom?.port = "5566"
+        }
+        //如果是设置打开的，直接打开端口
+        //if (Utils.usePortCustom!!.auto && YCheck.isPort(Utils.usePortCustom?.port))
+        //    Utils.open(Utils.usePortCustom!!.port)
 
         val data = intent.getStringExtra("data")
         if (data != null) {
+            //全部打开
             if (data == "open") {
-                open()
+                if (YCheck.isPort(Utils.usePortCustom?.port))
+                    Utils.open(Utils.usePortCustom!!.port)
                 finish()
                 return
             }
+            //全部关闭
             if (data == "close") {
-                close()
+                if (YCheck.isPort(Utils.usePortCustom?.port))
+                    Utils.close(Utils.usePortCustom!!.port)
                 finish()
                 return
             }
         }
-        open()
-        startActivity(Intent(this,SettingActivity::class.java))
+        val dialog = SettingDiaLog(this)
+        dialog.show()
+        dialog.setOnDismissListener { finish() }
         return
-    }
-
-    private fun open() {
-        val success = Utils.openNetworkDebugging()
-        if (success) {
-            Toast.makeText(
-                this,
-                "打开网络调试:成功" + if (Utils.IPV4?.size!! > 0) Utils.IPV4!![0] + ":" + Utils.PORT else "",
-                Toast.LENGTH_SHORT
-            ).show()
-        } else {
-            Toast.makeText(this, "打开网络调试:失败\n长按打开设置", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-    private fun close() {
-        val success = Utils.closeNetworkDebugging()
-        if (success) {
-            Toast.makeText(
-                this,
-                "关闭网络调试:成功" + if (Utils.IPV4?.size!! > 0) Utils.IPV4!![0] + ":" + Utils.PORT else "",
-                Toast.LENGTH_SHORT
-            ).show()
-        } else {
-            Toast.makeText(
-                this, "关闭网络调试:失败\n长按打开设置", Toast.LENGTH_SHORT
-            ).show()
-        }
     }
 
     /**
@@ -131,8 +116,8 @@ class MainActivity : AppCompatActivity() {
                         Intent.ACTION_MAIN,
                         Uri.EMPTY,
                         this,
-                        SettingActivity::class.java
-                    ).putExtra("data", "setting")
+                        MainActivity::class.java
+                    )
                 )
             )
             .build()

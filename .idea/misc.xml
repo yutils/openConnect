@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/yujing/AndroidStudioProjects/openConnect/app/src/main/res/drawable/button.xml" value="0.28958333333333336" />
+        <entry key="..\:/Users/yujing/AndroidStudioProjects/openConnect/app/src/main/res/drawable/button_left.xml" value="0.3229166666666667" />
+        <entry key="..\:/Users/yujing/AndroidStudioProjects/openConnect/app/src/main/res/drawable/button_right.xml" value="0.3229166666666667" />
+        <entry key="..\:/Users/yujing/AndroidStudioProjects/openConnect/app/src/main/res/drawable/dotted_line.xml" value="0.5416666666666666" />
+        <entry key="..\:/Users/yujing/AndroidStudioProjects/openConnect/app/src/main/res/drawable/keyboard_click.xml" value="0.3229166666666667" />
         <entry key="..\:/Users/yujing/AndroidStudioProjects/openConnect/app/src/main/res/layout/activity_setting.xml" value="0.3026041666666667" />
+        <entry key="..\:/Users/yujing/AndroidStudioProjects/openConnect/app/src/main/res/layout/dialog_setting.xml" value="0.33" />
       </map>
     </option>
   </component>
