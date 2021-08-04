@@ -74,7 +74,7 @@ adb连接举例："adb connect 192.168.1.6"
 
 ## 效果图
 
-![效果图1](https://raw.githubusercontent.com/yutils/openConnect/master/image/image1.jpg)
+![效果图1](https://raw.githubusercontent.com/yutils/openConnect/master/image/image1.png)
 
 
 [我的github地址](https://github.com/yutils/openConnect)
