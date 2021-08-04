@@ -2,12 +2,14 @@ package com.yujing.openConnect
 
 import android.app.Activity
 import android.content.Intent
+import android.content.res.Configuration
 import android.graphics.Color
 import android.net.Uri
 import com.yujing.base.YBaseDialog
 import com.yujing.openConnect.databinding.DialogSettingBinding
 import com.yujing.openConnect.utlis.Utils
 import com.yujing.utils.YCheck
+import com.yujing.utils.YScreenUtil
 import com.yujing.utils.YToast
 import com.yujing.utils.YUtils
 
@@ -19,8 +21,14 @@ class SettingDiaLog(activity: Activity) :
     init {
         fullscreen = false
         openAnimation = false
-        widthPixels = 0.8f
-        heightPixels = 0.6f
+        //如果是横屏
+        if (activity.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            widthPixels = 0.6f
+            heightPixels = 0.8f
+        }else{
+            widthPixels = 0.8f
+            heightPixels = 0.6f
+        }
         fullscreen = false
         screenWidthDp=360F
         fillColor = Color.parseColor("#C0FFFFFF")
