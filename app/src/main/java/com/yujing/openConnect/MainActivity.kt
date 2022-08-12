@@ -47,15 +47,13 @@ class MainActivity : AppCompatActivity() {
         if (data != null) {
             //全部打开
             if (data == "open") {
-                if (YCheck.isPort(Utils.usePortCustom?.port))
-                    Utils.open(Utils.usePortCustom!!.port)
+                if (YCheck.isPort(Utils.usePortCustom?.port)) Utils.open(Utils.usePortCustom!!.port)
                 finish()
                 return
             }
             //全部关闭
             if (data == "close") {
-                if (YCheck.isPort(Utils.usePortCustom?.port))
-                    Utils.close(Utils.usePortCustom!!.port)
+                if (YCheck.isPort(Utils.usePortCustom?.port)) Utils.close(Utils.usePortCustom!!.port)
                 finish()
                 return
             }
@@ -79,61 +77,28 @@ class MainActivity : AppCompatActivity() {
             .setLongLabel("打开网络调试")
             .setIcon(Icon.createWithResource(this, R.mipmap.open))
             //.setIntent(Intent(Intent.ACTION_VIEW, Uri.parse("https://www.baidu.com")))
-            .setIntents(
-                arrayOf(
-                    Intent(
-                        Intent.ACTION_MAIN,
-                        Uri.EMPTY,
-                        this,
-                        MainActivity::class.java
-                    ).putExtra("data", "open")
-                )
-            )
+            .setIntents(arrayOf(Intent(Intent.ACTION_MAIN, Uri.EMPTY, this, MainActivity::class.java).putExtra("data", "open")))
             .build()
 
         val scInfo2 = ShortcutInfo.Builder(this, "shortcut_id_2")
             .setShortLabel("关闭网络调试")
             .setLongLabel("关闭网络调试")
             .setIcon(Icon.createWithResource(this, R.mipmap.close))
-            .setIntents(
-                arrayOf(
-                    Intent(
-                        Intent.ACTION_MAIN,
-                        Uri.EMPTY,
-                        this,
-                        MainActivity::class.java
-                    ).putExtra("data", "close")
-                )
-            )
+            .setIntents(arrayOf(Intent(Intent.ACTION_MAIN, Uri.EMPTY, this, MainActivity::class.java).putExtra("data", "close")))
             .build()
         val scInfo3 = ShortcutInfo.Builder(this, "shortcut_id_3")
             .setShortLabel("打开设置")
             .setLongLabel("打开设置")
             .setIcon(Icon.createWithResource(this, R.mipmap.setting))
-            .setIntents(
-                arrayOf(
-                    Intent(
-                        Intent.ACTION_MAIN,
-                        Uri.EMPTY,
-                        this,
-                        MainActivity::class.java
-                    )
-                )
-            )
+            .setIntents(arrayOf(Intent(Intent.ACTION_MAIN, Uri.EMPTY, this, MainActivity::class.java)))
             .build()
         //③、为ShortcutManager设置动态快捷方式集合
         scManager.dynamicShortcuts = listOf(scInfo1, scInfo2, scInfo3)
 
         //如果想为两个动态快捷方式进行排序，可执行下面的代码
-        val dynamic1 = ShortcutInfo.Builder(this, "shortcut_id_1")
-            .setRank(0)
-            .build()
-        val dynamic2 = ShortcutInfo.Builder(this, "shortcut_id_2")
-            .setRank(1)
-            .build()
-        val dynamic3 = ShortcutInfo.Builder(this, "shortcut_id_3")
-            .setRank(3)
-            .build()
+        val dynamic1 = ShortcutInfo.Builder(this, "shortcut_id_1").setRank(0).build()
+        val dynamic2 = ShortcutInfo.Builder(this, "shortcut_id_2").setRank(1).build()
+        val dynamic3 = ShortcutInfo.Builder(this, "shortcut_id_3").setRank(3).build()
         //④、更新快捷方式集合
         scManager.updateShortcuts(listOf(dynamic1, dynamic2, dynamic3))
     }

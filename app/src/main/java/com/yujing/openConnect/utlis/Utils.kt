@@ -11,7 +11,6 @@ import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.NetworkInterface
 import java.net.SocketException
-import java.util.*
 
 object Utils {
     val IPV4 get() = getIPv4()
@@ -40,7 +39,7 @@ object Utils {
                 while (item.hasMoreElements()) {
                     val inetAddress = item.nextElement()
                     if (!inetAddress.isLoopbackAddress && inetAddress is Inet6Address) {
-                        ips.add(inetAddress.getHostAddress())
+                        inetAddress.getHostAddress()?.let { ips.add(it) }
                     }
                 }
             }
@@ -56,18 +55,16 @@ object Utils {
      * @return ipv4地址列表
      */
     private fun getIPv4(): List<String>? {
-        val ips: MutableList<String> =
-            ArrayList()
+        val ips: MutableList<String> = ArrayList()
         try {
-            val en =
-                NetworkInterface.getNetworkInterfaces()
+            val en = NetworkInterface.getNetworkInterfaces()
             while (en.hasMoreElements()) {
                 val ni = en.nextElement()
                 val item = ni.inetAddresses
                 while (item.hasMoreElements()) {
                     val inetAddress = item.nextElement()
                     if (!inetAddress.isLoopbackAddress && inetAddress is Inet4Address) {
-                        ips.add(inetAddress.getHostAddress())
+                        inetAddress.getHostAddress()?.let { ips.add(it) }
                     }
                 }
             }
@@ -92,10 +89,7 @@ object Utils {
     fun close(port: String) {
         val success = closeNetworkDebugging(port)
         if (success) {
-            YToast.show(
-                App.get(),
-                "关闭网络调试:成功" + if (IPV4?.size!! > 0) IPV4!![0] + ":" + port else ""
-            )
+            YToast.show(App.get(), "关闭网络调试:成功" + if (IPV4?.size!! > 0) IPV4!![0] + ":" + port else "")
         } else {
             YToast.show(App.get(), "关闭网络调试:失败\n长按打开设置")
         }

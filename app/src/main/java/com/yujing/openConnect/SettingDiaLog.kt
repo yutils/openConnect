@@ -9,15 +9,13 @@ import com.yujing.base.YBaseDialog
 import com.yujing.openConnect.databinding.DialogSettingBinding
 import com.yujing.openConnect.utlis.Utils
 import com.yujing.utils.YCheck
-import com.yujing.utils.YScreenUtil
 import com.yujing.utils.YToast
 import com.yujing.utils.YUtils
 
 /**
  * 添加质量因素
  */
-class SettingDiaLog(activity: Activity) :
-    YBaseDialog<DialogSettingBinding>(activity, R.layout.dialog_setting) {
+class SettingDiaLog(activity: Activity) : YBaseDialog<DialogSettingBinding>(activity, R.layout.dialog_setting) {
     init {
         fullscreen = false
         openAnimation = false
@@ -25,12 +23,12 @@ class SettingDiaLog(activity: Activity) :
         if (activity.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
             widthPixels = 0.6f
             heightPixels = 0.8f
-        }else{
+        } else {
             widthPixels = 0.8f
             heightPixels = 0.6f
         }
         fullscreen = false
-        screenWidthDp=360F
+        screenWidthDp = 360F
         fillColor = Color.parseColor("#C0FFFFFF")
     }
 

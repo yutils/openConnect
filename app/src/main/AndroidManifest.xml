@@ -17,6 +17,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".MainActivity"
+            android:exported="true"
             android:theme="@style/OnePixelActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -26,7 +27,9 @@
         </activity>
 
         <!--App自启动-->
-        <receiver android:name=".broadcast.AutoStartBroadcast">
+        <receiver
+            android:name=".broadcast.AutoStartBroadcast"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
 
