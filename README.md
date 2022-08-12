@@ -1,6 +1,6 @@
 # 一键打开网络调试（支持开机自启）
 
-开发环境 AS2020.3.1 ，kotlin 1.5.21，java8，gradle7.1
+开发环境 AS2021.2.1 ，kotlin 1.7.10，java11，gradle7.4.2
 
 ## 开发环境准备
 **推荐使用jetBrains Toolbox 中的android studio，并更新到最新正式版**  
