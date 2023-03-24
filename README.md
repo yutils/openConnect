@@ -3,8 +3,8 @@
 开发环境 AS2022.1.1 ，kotlin 1.8.10，java11，gradle7.6
 
 ## 开发环境准备
-方法1：直接点击菜单中help->Edit Custom VM Options，然后在最后一行添加	-Dfile.encoding=UTF-8
-方法2：打开AS的安装目录，在bin目录下找到这两个文件（studio.exe.vmoptions，studio64.exe.vmoptions） 在最后一行添加	-Dfile.encoding=UTF-8
+方法1：直接点击菜单中help->Edit Custom VM Options，然后在最后一行添加	-Dfile.encoding=UTF-8  
+方法2：打开AS的安装目录，在bin目录下找到这两个文件（studio.exe.vmoptions，studio64.exe.vmoptions） 在最后一行添加	-Dfile.encoding=UTF-8  
 //安装目录位置 C:\Users\用户名\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\版本\bin
 
 ## 说明
