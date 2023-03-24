@@ -36,8 +36,7 @@ class MainActivity : AppCompatActivity() {
         window.attributes = params
         //初始化
         if (Utils.usePortCustom == null) {
-            Utils.usePortCustom = UsePort()
-            Utils.usePortCustom?.port = "5566"
+            Utils.usePortCustom = UsePort("5566", open = true, auto = true)
         }
         //如果是设置打开的，直接打开端口
         //if (Utils.usePortCustom!!.auto && YCheck.isPort(Utils.usePortCustom?.port))

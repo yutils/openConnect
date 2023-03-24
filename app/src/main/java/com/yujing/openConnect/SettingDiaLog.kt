@@ -36,7 +36,7 @@ class SettingDiaLog(activity: Activity) : YBaseDialog<DialogSettingBinding>(acti
         binding.tvTitle.text = "网络调试"
         //本机IP
         binding.tvIp.isSelected = true
-        binding.tvIp.text = "本机IP：" + YUtils.getIPv4().toTypedArray().contentToString()
+        binding.tvIp.text = "本机IP：${YUtils.getIPv4().toTypedArray().contentToString()}"
         binding.switchOpenCustom.isChecked = Utils.usePortCustom?.open!!
         binding.switchAutoCustom.isChecked = Utils.usePortCustom?.auto!!
         //赋值自定义
@@ -44,7 +44,7 @@ class SettingDiaLog(activity: Activity) : YBaseDialog<DialogSettingBinding>(acti
         //执行
         binding.btConfirm.setOnClickListener {
             //打开Custom
-            var portCustom = binding.etCustomPort.text.toString()
+            val portCustom = binding.etCustomPort.text.toString()
             if (YCheck.isPort(portCustom)) {
                 Utils.usePortCustom?.port = portCustom
                 Utils.usePortCustom?.open = binding.switchOpenCustom.isChecked

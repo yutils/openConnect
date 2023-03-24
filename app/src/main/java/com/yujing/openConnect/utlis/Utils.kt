@@ -28,8 +28,7 @@ object Utils {
      * @return ipv6地址列表
      */
     private fun getIPv6(): List<String>? {
-        val ips: MutableList<String> =
-            ArrayList()
+        val ips: MutableList<String> = ArrayList()
         try {
             val en =
                 NetworkInterface.getNetworkInterfaces()
@@ -77,10 +76,7 @@ object Utils {
     fun open(port: String) {
         val success = openNetworkDebugging(port)
         if (success) {
-            YToast.show(
-                App.get(),
-                "打开网络调试:成功" + if (IPV4?.size!! > 0) IPV4!![0] + ":" + port else ""
-            )
+            YToast.show(App.get(), "打开网络调试:成功" + if (IPV4?.size!! > 0) IPV4!![0] + ":" + port else "")
         } else {
             YToast.show(App.get(), "打开网络调试:失败\n长按打开设置")
         }

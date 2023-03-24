@@ -11,10 +11,6 @@ class App : Application() {
     //单列
     companion object {
         private var instance: App? = null
-            get() {
-                if (field == null) field = App()
-                return field
-            }
 
         @Synchronized
         fun get(): App {

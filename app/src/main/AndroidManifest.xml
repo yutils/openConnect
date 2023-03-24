@@ -29,12 +29,11 @@
         <!--App自启动-->
         <receiver
             android:name=".broadcast.AutoStartBroadcast"
+            android:enabled="true"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-                <category android:name="android.intent.category.HOME" />
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </receiver>
     </application>
