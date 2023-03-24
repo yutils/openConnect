@@ -1,18 +1,11 @@
 # 一键打开网络调试（支持开机自启）
 
-开发环境 AS2021.2.1 ，kotlin 1.7.10，java11，gradle7.4.2
+开发环境 AS2022.1.1 ，kotlin 1.8.10，java11，gradle7.6
 
 ## 开发环境准备
-**推荐使用jetBrains Toolbox 中的android studio，并更新到最新正式版**  
-
-【必须】打开AS的安装目录，在bin目录下找到这两个文件（studio.exe.vmoptions，studio64.exe.vmoptions）  
-在其中最后一行添加	-Dfile.encoding=UTF-8   
-```bat
-安装目录位置
-C:\Users\用户名\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\版本\bin
-如：
-C:\Users\yujing\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\211.7628.21.2111.8139111\bin
-```
+方法1：直接点击菜单中help->Edit Custom VM Options，然后在最后一行添加	-Dfile.encoding=UTF-8
+方法2：打开AS的安装目录，在bin目录下找到这两个文件（studio.exe.vmoptions，studio64.exe.vmoptions） 在最后一行添加	-Dfile.encoding=UTF-8
+//安装目录位置 C:\Users\用户名\AppData\Local\JetBrains\Toolbox\apps\AndroidStudio\ch-0\版本\bin
 
 ## 说明
 
@@ -87,7 +80,6 @@ adb连接举例："adb connect 192.168.1.6"
 ## 效果图
 
 ![效果图1](https://raw.githubusercontent.com/yutils/openConnect/master/image/image1.png)
-
 
 [我的github地址](https://github.com/yutils/openConnect)
 
